@@ -12,21 +12,21 @@ export default function Affirmation() {
         "Keep going, you’re doing great!",
     ];
 
-    // State for the current shown affirmation index
+    
     const [randomIndex, setRandomIndex] = useState(() =>
         Math.floor(Math.random() * affirmations.length)
     );
 
-    // State to keep likes per affirmation as an array of numbers
+   
     const [likes, setLikes] = useState(Array(affirmations.length).fill(0));
 
-    // Show a new random affirmation
+   
     function showNewAffirmation() {
         const index = Math.floor(Math.random() * affirmations.length);
         setRandomIndex(index);
     }
 
-    // Increment like count for current affirmation
+  
     function likeCurrentAffirmation() {
         const updatedLikes = [...likes];
         updatedLikes[randomIndex] += 1;

@@ -46,7 +46,7 @@ export default function Today1() {
 
   const deleteTask = async (id) => {
     try {
-      await API.delete(`/${id}`);
+      await API.delete(`/tasks/${id}`);
       setTasks(tasks.filter((task) => task._id !== id));
     } catch (err) {
       console.error(err.response?.data || err.message);
@@ -61,7 +61,7 @@ export default function Today1() {
   const handleEditKeyDown = async (e, id) => {
     if (e.key === 'Enter') {
       try {
-        const res = await API.patch(`/${id}`, { note: editedTitle });
+        const res = await API.patch(`/${id}`, { title: editedTitle });
         setTasks(tasks.map((task) => (task._id === id ? res.data : task)));
         setEditingId(null);
         setEditedTitle('');

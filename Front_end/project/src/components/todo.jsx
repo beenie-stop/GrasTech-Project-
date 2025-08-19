@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import Header from './Header';
+import Header from './header';
 import '../css/todo.css'
 export default function Todo() {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ export default function Todo() {
                 <div className='button-container'>
                     <button className='button' onClick={() => navigate('/Today')}>Today</button>
                     <button className='button' onClick={() => navigate('/Affirmation')}>Affirmation</button>
-                    <button className='button' onClick={() => navigate('/All')}>All Due Task<br/>Will only show due-task</button>
+                    <button className='button' onClick={() => navigate('/All')}>All Task</button>
                 </div>
             </div>
             <Link to='/Addlist' className='list'>Add list</Link>

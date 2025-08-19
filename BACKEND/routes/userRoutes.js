@@ -16,7 +16,7 @@ router.post('/signin', signIn)
 router.post("/add", authentication, addTask);
  router.get("/todaytask", authentication, getTodayTasks);
 router.get("/allTask", authentication, getAllTasks);
-router.delete("/:id", authentication, deleteTask);
+router.delete("/tasks/:id", authentication, deleteTask);
 router.patch("/:id", authentication, updateTaskNote);
 export default router;
 

@@ -62,7 +62,7 @@ export const updateTaskNote = async (req, res) => {
     const { note } = req.body;
     const task = await Task.findOneAndUpdate(
       { _id: req.params.id, user: req.user.id },
-      { note },
+      { title: req.body.title },
       { new: true }
     );
 

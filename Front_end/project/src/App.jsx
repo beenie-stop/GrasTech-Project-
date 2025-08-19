@@ -8,7 +8,7 @@ import Affirmation from './components/affirmation';
 import AllTasks from './components/all';
 import Footer from './components/footer';
 import Todo from './components/todo';
-//import AddList from './components/addlist';
+import Addlist from './components/addlist';
 
 export default function App() {
     return (
@@ -26,7 +26,7 @@ export default function App() {
                 <Route path="/today" element={<Today1 />} />
                 <Route path="/todo" element={<Todo />} />
                 <Route path="/all" element={<AllTasks />} />
-                 {/* <Route path="/addlist" element={<Addlist />} />  */}
+                 <Route path="/addlist" element={<Addlist />} />  
                 <Route path="/affirmation" element={<Affirmation />} />
             </Routes>
 

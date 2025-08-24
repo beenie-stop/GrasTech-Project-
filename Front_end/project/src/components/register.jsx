@@ -28,7 +28,7 @@ export default function Register() {
 
             if (response.status === 200 || response.status === 201) {
                 alert("Registration successful!");
-                navigate('/todo'); 
+                navigate('/signin'); 
             } else {
                 alert("Registration failed. Please try again.");
             }
